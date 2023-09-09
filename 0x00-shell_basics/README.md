@@ -1,118 +1,69 @@
 # 0x00-shell_basics
 
-## Overview
-This repository contains a series of shell scripts and tasks designed to help you learn the basics of using the shell, specifically focusing on Bash. These scripts cover various aspects of shell navigation, file manipulation, and command execution.
+This project is part of the DevOps curriculum and covers the fundamentals of working with the Bash shell. It consists of several tasks designed to help you understand basic shell commands, navigation, and file manipulation.
 
 ## Table of Contents
-1. [General Information](#general-information)
-2. [Project Tasks](#project-tasks)
-3. [Usage](#usage)
-4. [Quiz](#quiz)
-5. [Contributing](#contributing)
-6. [License](#license)
 
-## General Information
-In this project, you will learn the fundamentals of working with a Unix-like shell environment. The tasks cover topics such as navigating the file system, using essential commands, and understanding various concepts related to the shell.
+- [Introduction](#introduction)
+- [Tasks](#tasks)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [License](#license)
 
-### Learning Objectives
-By completing the tasks in this project, you will be able to:
+## Introduction
 
-- Understand the basics of using the shell.
-- Navigate the file system efficiently.
-- Manipulate files and directories.
-- Execute commands and understand their options.
-- Read and interpret manual pages (man pages).
-- Learn keyboard shortcuts for Bash.
-- Gain familiarity with some advanced shell operations.
+In this project, you will learn essential concepts of shell scripting and command-line operations. The tasks will guide you through various aspects of working with the Bash shell, including file manipulation, navigation, and command execution.
 
-## Project Tasks
-Here is a list of tasks included in this project:
+## Tasks
 
-1. **Where am I?**
-   - Description: Print the absolute path name of the current working directory.
-   - Script: [0-current_working_directory](./0-current_working_directory)
+The project includes the following tasks:
 
-2. **What’s in there?**
-   - Description: Display the contents list of your current directory.
-   - Script: [1-listit](./1-listit)
+1. [Where am I?](#task-0-where-am-i)
+2. [What’s in there?](#task-1-whats-in-there)
+3. [There is no place like home](#task-2-there-is-no-place-like-home)
+4. [The long format](#task-3-the-long-format)
+5. [Hidden files](#task-4-hidden-files)
+6. [I love numbers](#task-5-i-love-numbers)
+7. [Welcome](#task-6-welcome)
+8. [Betty in my first directory](#task-7-betty-in-my-first-directory)
+9. [Bye bye Betty](#task-8-bye-bye-betty)
+10. [Bye bye My first directory](#task-9-bye-bye-my-first-directory)
+11. [Back to the future](#task-10-back-to-the-future)
+12. [Lists](#task-11-lists)
+13. [File type](#task-12-file-type)
+14. [We are symbols, and inhabit symbols](#task-13-we-are-symbols-and-inhabit-symbols)
+15. [Copy HTML files](#task-14-copy-html-files)
+16. [Let’s move](#task-15-lets-move)
+17. [Clean Emacs](#task-16-clean-emacs)
+18. [Tree](#task-17-tree)
+19. [Life is a series of commas, not periods](#task-18-life-is-a-series-of-commas-not-periods)
+20. [File type: School](#task-19-file-type-school)
 
-3. **There is no place like home**
-   - Description: Change the working directory to the user's home directory.
-   - Script: [2-bring_me_home](./2-bring_me_home)
+## Requirements
 
-4. **The long format**
-   - Description: Display the current directory's contents in long format.
-   - Script: [3-listfiles](./3-listfiles)
-
-5. **Hidden files**
-   - Description: Display the current directory's contents, including hidden files, in long format.
-   - Script: [4-listmorefiles](./4-listmorefiles)
-
-6. **I love numbers**
-   - Description: Display the current directory's contents in long format with user and group IDs displayed numerically, including hidden files.
-   - Script: [5-listfilesdigitonly](./5-listfilesdigitonly)
-
-7. **Welcome**
-   - Description: Create a directory named "my_first_directory" in the /tmp/ directory.
-   - Script: [6-firstdirectory](./6-firstdirectory)
-
-8. **Betty in my first directory**
-   - Description: Move the file "betty" from /tmp/ to /tmp/my_first_directory.
-   - Script: [7-movethatfile](./7-movethatfile)
-
-9. **Bye bye Betty**
-   - Description: Delete the file "betty" from /tmp/my_first_directory.
-   - Script: [8-firstdelete](./8-firstdelete)
-
-10. **Bye bye My first directory**
-    - Description: Delete the directory "my_first_directory" from the /tmp directory.
-    - Script: [9-firstdirdeletion](./9-firstdirdeletion)
-
-11. **Back to the future**
-    - Description: Change the working directory to the previous one.
-    - Script: [10-back](./10-back)
-
-12. **Lists**
-    - Description: List files from the current directory, parent directory, and /boot directory in long format.
-    - Script: [11-lists](./11-lists)
-
-13. **File type**
-    - Description: Print the type of the file named "iamafile" in the /tmp directory.
-    - Script: [12-file_type](./12-file_type)
-
-14. **We are symbols, and inhabit symbols**
-    - Description: Create a symbolic link to /bin/ls named "__ls__" in the current working directory.
-    - Script: [13-symbolic_link](./13-symbolic_link)
-
-15. **Copy HTML files**
-    - Description: Copy HTML files from the current directory to the parent directory if they don't exist or are newer.
-    - Script: [14-copy_html](./14-copy_html)
-
-16. **Let’s move**
-    - Description: Move files beginning with an uppercase letter to the directory /tmp/u.
-    - Script: [100-lets_move](./100-lets_move)
-
-17. **Clean Emacs**
-    - Description: Delete files in the current working directory that end with the character "~".
-    - Script: [101-clean_emacs](./101-clean_emacs)
-
-18. **Tree**
-    - Description: Create directories "welcome/", "welcome/to/", and "welcome/to/school" in the current directory.
-    - Script: [102-tree](./102-tree)
-
-19. **Life is a series of commas, not periods**
-    - Description: List files and directories in the current directory, separated by commas.
-    - Script: [103-commas](./103-commas)
-
-20. **File type: School**
-    - Description: Create a magic file "school.mgc" to detect School data files.
-    - Script: [school.mgc](./school.mgc)
+- Allowed editors: vi, vim, emacs
+- All scripts will be tested on Ubuntu 20.04 LTS
+- All scripts should be exactly two lines long (`$ wc -l file` should print 2)
+- All your files should end with a new line
+- The first line of all your files should be exactly `#!/bin/bash`
+- A README.md file at the root of the repo, containing a description of the repository
+- A README.md file, at the root of the folder of this project, describing what each script is doing
+- You are not allowed to use backticks, &&, ||, or ;
+- All your scripts must be executable. To make your file executable, use the `chmod` command: `chmod u+x file`
 
 ## Usage
-To use these scripts, follow these steps:
 
-1. Clone the repository to your local machine.
-2. Navigate to the desired script's location in your terminal.
-3. Make the script executable using the `chmod` command. For example:
-   ```bash
-   chmod +x script_name.sh
+To run any of the scripts in this project, you can use the following command:
+
+```bash
+$ ./script-name
+```
+
+Replace `script-name` with the name of the script you want to execute.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
+Replace `[task description](#task-link)` with the appropriate links to the task descriptions. You can also add more details to each task in your README if needed.
