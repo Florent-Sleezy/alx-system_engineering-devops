@@ -1,130 +1,182 @@
-# 0x03. Shell, init files, variables, and expansions
+# 0x02-shell_redirections
 
-This repository contains a set of scripts written in Bash to help you understand and practice various aspects of shell scripting, initialization files, variables, and expansions.
+This project consists of a collection of shell scripts that demonstrate various aspects of shell redirections and text processing. Each script corresponds to a specific task and showcases different techniques in shell scripting.
 
-## Table of Contents
+## Task 0: Hello World
 
-1. [General Information](#general-information)
-2. [Learning Objectives](#learning-objectives)
-3. [Tasks](#tasks)
-4. [Requirements](#requirements)
-5. [Usage](#usage)
-6. [Quiz Questions](#quiz-questions)
-7. [Author](#author)
-8. [License](#license)
+**Script**: [0-hello_world](./0-hello_world)
 
-## General Information
+This script simply prints "Hello, World" to the standard output when executed.
 
-This project is part of the DevOps curriculum and focuses on improving your understanding of shell scripting. It covers topics such as shell initialization files, variables, expansions, and more.
+## Task 1: Confused smiley
 
-## Learning Objectives
+**Script**: [1-confused_smiley](./1-confused_smiley)
 
-After completing this project, you should be able to explain the following concepts without relying on external sources:
+When run, this script displays a confused smiley face to the standard output.
 
-### General
-- What happens when you type `$ ls -l *.txt`.
+## Task 2: Let's display a file
 
-### Shell Initialization Files
-- What are the `/etc/profile` file and the `/etc/profile.d` directory.
-- What is the `~/.bashrc` file.
+**Script**: [2-hellofile](./2-hellofile)
 
-### Variables
-- The difference between a local and a global variable.
-- What a reserved variable is.
-- How to create, update, and delete shell variables.
-- The roles of the following reserved variables: `HOME`, `PATH`, `PS1`.
-- What special parameters are.
-- What the special parameter `$?` is.
+This script takes a file path as an argument and displays the contents of that file.
 
-### Expansions
-- What expansion is and how to use them.
-- The difference between single and double quotes and how to use them properly.
-- How to do command substitution with `$()` and backticks.
+## Task 3: What about 2?
 
-### Shell Arithmetic
-- How to perform arithmetic operations with the shell.
+**Script**: [3-twofiles](./3-twofiles)
 
-### The alias Command
-- How to create an alias.
-- How to list aliases.
-- How to temporarily disable an alias.
+The script takes two file paths as arguments and concatenates the contents of these two files, displaying the result.
 
-## Tasks
+## Task 4: Last lines of a file
 
-This project consists of several tasks, each with its own script to be completed. Here is a brief overview of the tasks:
+**Script**: [4-lastlines](./4-lastlines)
 
-1. **0-alias**: Create a script that creates an alias with the name `ls` and the value `rm *`.
+Given a file as input, this script displays the last ten lines of the file.
 
-2. **1-hello_you**: Create a script that prints "hello user," where user is the current Linux user.
+## Task 5: I'd prefer the first ones actually
 
-3. **2-path**: Add `/action` to the `PATH` variable as the last directory the shell looks into when looking for a program.
+**Script**: [5-firstlines](./5-firstlines)
 
-4. **3-paths**: Create a script that counts the number of directories in the `PATH`.
+Similar to the previous task, this script takes a file as input but displays the first ten lines of the file.
 
-5. **4-global_variables**: Create a script that lists environment variables.
+## Task 6: Line #2
 
-6. **5-local_variables**: Create a script that lists all local variables, environment variables, and functions.
+**Script**: [6-third_line](./6-third_line)
 
-7. **6-create_local_variable**: Create a script that creates a new local variable named `BEST` with the value `School`.
+This script prints the third line of a file. It takes the file path as an argument.
 
-8. **7-create_global_variable**: Create a script that creates a new global variable named `BEST` with the value `School`.
+## Task 7: It is a good file that cuts iron without making a noise
 
-9. **8-true_knowledge**: Write a script that prints the result of adding 128 to the value stored in the environment variable `TRUEKNOWLEDGE`.
+**Script**: [7-file](./7-file)
 
-10. **9-divide_and_rule**: Write a script that prints the result of dividing the value of the environment variable `POWER` by `DIVIDE`.
+The script checks if a file exists. If it does, it outputs "file exists." Otherwise, it remains silent.
 
-11. **10-love_exponent_breath**: Write a script that displays the result of raising the value of `BREATH` to the power of `LOVE`.
+## Task 8: Save current state of directory
 
-12. **11-binary_to_decimal**: Write a script that converts a binary number stored in the environment variable `BINARY` to its decimal equivalent.
+**Script**: [8-cwd_state](./8-cwd_state)
 
-13. **12-combinations**: Create a script that prints all possible combinations of two lowercase letters, excluding "oo".
+This script saves the current working directory path to a file named `ls_cwd_content` and then lists the contents of the current directory.
 
-14. **13-print_float**: Write a script that prints a number with two decimal places, given the value in the `NUM` environment variable.
+## Task 9: Duplicate last line
 
-15. **100-decimal_to_hexadecimal**: Write a script that converts a decimal number stored in the environment variable `DECIMAL` to its hexadecimal equivalent.
+**Script**: [9-duplicate_last_line](./9-duplicate_last_line)
 
-16. **101-rot13**: Write a script that encodes and decodes text using the rot13 encryption.
+This script duplicates the last line of a file and saves it to a new file.
 
-17. **102-odd**: Write a script that prints every other line from the input, starting with the first line.
+## Task 10: No more javascript
 
-18. **103-water_and_stir**: Write a script that adds two numbers stored in the environment variables `WATER` and `STIR` and prints the result.
+**Script**: [10-no_more_js](./10-no_more_js)
 
-## Requirements
+The script deletes all the files in the current directory that have a `.js` (JavaScript) extension.
 
-- Allowed editors: `vi`, `vim`, `emacs`.
-- All scripts will be tested on Ubuntu 20.04 LTS.
-- All scripts should be exactly two lines long (`$ wc -l file` should print 2).
-- All script files must end with a new line.
-- The first line of all script files should be `#!/bin/bash`.
-- You are not allowed to use `&&`, `||`, or `;` in your scripts.
-- You are not allowed to use `bc`, `sed`, or `awk`.
-- All script files must be executable.
+## Task 11: Don't just count your directories, make your directories count
+
+**Script**: [11-directories](./11-directories)
+
+This script counts the number of subdirectories in the current directory.
+
+## Task 12: What’s new
+
+**Script**: [12-newest_files](./12-newest_files)
+
+The script displays the ten newest files in the current directory, sorted by modification time, with the most recent file first.
+
+## Task 13: Being unique is better than being perfect
+
+**Script**: [13-unique](./13-unique)
+
+This script takes a list of words as input and prints only words that appear exactly once. The output is sorted.
+
+## Task 14: It must be in that file
+
+**Script**: [14-findthatword](./14-findthatword)
+
+This script displays lines containing the pattern "root" from the file `/etc/passwd`.
+
+## Task 15: Count that word
+
+**Script**: [15-countthatword](./15-countthatword)
+
+The script displays the number of lines that contain the pattern "bin" in the file `/etc/passwd`.
+
+## Task 16: What's next?
+
+**Script**: [16-whatsnext](./16-whatsnext)
+
+This script displays lines containing the pattern "root" and the three lines after them in the file `/etc/passwd`.
+
+## Task 17: I hate bins
+
+**Script**: [17-hidethisword](./17-hidethisword)
+
+The script displays all the lines in the file `/etc/passwd` that do not contain the pattern "bin".
+
+## Task 18: Letters only please
+
+**Script**: [18-letteronly](./18-letteronly)
+
+This script displays all lines of the file `/etc/ssh/sshd_config` that start with a letter, including capital letters.
+
+## Task 19: A to Z
+
+**Script**: [19-AZ](./19-AZ)
+
+The script replaces all occurrences of characters 'A' and 'c' with 'Z' and 'e', respectively, in the input.
+
+## Task 20: Without C, you would live in hiago
+
+**Script**: [20-hiago](./20-hiago)
+
+This script removes all instances of the letters 'c' and 'C' from the input.
+
+## Task 21: esreveR
+
+**Script**: [21-reverse](./21-reverse)
+
+The script reverses its input string.
+
+## Task 22: DJ Cut Killer
+
+**Script**: [22-users_and_homes](./22-users_and_homes)
+
+This script displays all users and their home directories, sorted by users, based on the `/etc/passwd` file.
+
+## Task 23: Empty casks make the most noise
+
+**Script**: [100-empty_casks](./100-empty_casks)
+
+The script lists all empty files and directories in the current directory and its subdirectories. Only the names of the files and directories are displayed, one per line.
+
+## Task 24: A gif is worth ten thousand words
+
+**Script**: [101-gifs](./101-gifs)
+
+This script lists all files with a `.gif` extension in the current directory and its subdirectories. It displays the file names without extensions, sorted by byte values in a case-insensitive manner.
+
+## Task 25: Acrostic
+
+**Script**: [102-acrostic](./102-acrostic)
+
+This script decodes acrostics that use the first letter of each line in the input text.
+
+## Task 26: The biggest fan
+
+**Script**: [103-the_biggest_fan](./103-the_biggest_f
+
+an)
+
+Parses web server logs in TSV (Tab-Separated Values) format and displays the top 11 hosts or IP addresses that made the most requests.
 
 ## Usage
 
-1. Clone this repository:
-   ```
-   git clone https://github.com/julienbarbier42/alx-system_engineering-devops.git
-   ```
+You can execute each script by running the command `./script-name` in your terminal.
 
-2. Navigate to the project directory:
-   ```
-   cd alx-system_engineering-devops/0x03-shell_variables_expansions
-   ```
+For example:
+```bash
+./0-hello_world
+./1-confused_smiley
+# ... and so on for other scripts
+```
 
-3. Execute any of the scripts mentioned in the tasks using the following command:
-   ```
-   ./script-name
-   ```
+Feel free to explore and utilize these scripts for various text processing and shell redirection tasks. If you encounter any issues or have questions, please don't hesitate to reach out.
 
-## Quiz Questions
-
-You can find quiz questions related to the project in the quiz section of the DevOps curriculum.
-
-## Author
-
-- **Author:** Julien Barbier
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Happy scripting!
